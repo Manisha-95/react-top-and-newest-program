@@ -66,20 +66,22 @@ class App extends Component {
       <div>
       <button onClick={()=>this.ascend()}>Top</button>
       <button onClick={()=>this.newest()}>Newest</button>
-      
-      
-      
-      
-        
+  
+  <table>
+    <tr>
+    <th>Company</th>
+    <th>Upvotes</th>
+    <th>Last Seen</th>
+    </tr> 
       {this.state.data.map(item =>
-     
-        <List 
-        name={item.name}
-        votes={item.votes}
-        dates={item.date} />
+        <tr key={item.name}>
+          <td>{item.name}</td>
+          <td>{item.votes}</td>
+          <td>{item.date}</td>
+        </tr>
       )
       }
-      
+  </table>
       </div>
     );
   }
