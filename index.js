@@ -46,7 +46,7 @@ class App extends Component {
  ascend=() =>{
       var clone=[...this.state.data];
       
-      clone.sort((a,b)=>a.votes-b.votes);
+      clone.sort((a,b)=>b.votes-a.votes);
       //console.log(clone);
       this.setState({data:clone});
       //  {
