@@ -56,7 +56,7 @@ class App extends Component {
  newest=()=>{
    var clone=[...this.state.data];
    //console.log(clone);
-   clone.sort((a,b)=> new Date(a.date) - new Date(b.date)) 
+   clone.sort((a,b)=> new Date(b.date) - new Date(a.date)) 
    //console.log(clone);
    this.setState({data:clone});
  }
